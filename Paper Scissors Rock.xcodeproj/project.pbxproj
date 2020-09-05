@@ -9,11 +9,16 @@
 /* Begin PBXBuildFile section */
 		313A831924FD53240025F23E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313A831824FD53240025F23E /* AppDelegate.swift */; };
 		313A831B24FD53240025F23E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313A831A24FD53240025F23E /* SceneDelegate.swift */; };
-		313A831D24FD53240025F23E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313A831C24FD53240025F23E /* ViewController.swift */; };
+		313A831D24FD53240025F23E /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313A831C24FD53240025F23E /* PlayViewController.swift */; };
 		313A832024FD53240025F23E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 313A831E24FD53240025F23E /* Main.storyboard */; };
 		313A832224FD53260025F23E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 313A832124FD53260025F23E /* Assets.xcassets */; };
 		313A832524FD53260025F23E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 313A832324FD53260025F23E /* LaunchScreen.storyboard */; };
 		313A833024FD53260025F23E /* Paper_Scissors_RockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313A832F24FD53260025F23E /* Paper_Scissors_RockTests.swift */; };
+		313A833D24FD54660025F23E /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313A833C24FD54660025F23E /* ResultViewController.swift */; };
+		3148F4B124FD632E000AF5CF /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3148F4B024FD632E000AF5CF /* GameState.swift */; };
+		318BF1B32502B82200311A6E /* RPSMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318BF1B22502B82200311A6E /* RPSMatch.swift */; };
+		318BF1B52502BA9200311A6E /* RPS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318BF1B42502BA9200311A6E /* RPS.swift */; };
+		318BF1B92502BFA900311A6E /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318BF1B82502BFA900311A6E /* HistoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,7 +35,7 @@
 		313A831524FD53240025F23E /* Paper Scissors Rock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Paper Scissors Rock.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		313A831824FD53240025F23E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		313A831A24FD53240025F23E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		313A831C24FD53240025F23E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		313A831C24FD53240025F23E /* PlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayViewController.swift; sourceTree = "<group>"; };
 		313A831F24FD53240025F23E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		313A832124FD53260025F23E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		313A832424FD53260025F23E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,6 +43,11 @@
 		313A832B24FD53260025F23E /* Paper Scissors RockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Paper Scissors RockTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		313A832F24FD53260025F23E /* Paper_Scissors_RockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paper_Scissors_RockTests.swift; sourceTree = "<group>"; };
 		313A833124FD53260025F23E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		313A833C24FD54660025F23E /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		3148F4B024FD632E000AF5CF /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
+		318BF1B22502B82200311A6E /* RPSMatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPSMatch.swift; sourceTree = "<group>"; };
+		318BF1B42502BA9200311A6E /* RPS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPS.swift; sourceTree = "<group>"; };
+		318BF1B82502BFA900311A6E /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,11 +91,16 @@
 			children = (
 				313A831824FD53240025F23E /* AppDelegate.swift */,
 				313A831A24FD53240025F23E /* SceneDelegate.swift */,
-				313A831C24FD53240025F23E /* ViewController.swift */,
+				313A831C24FD53240025F23E /* PlayViewController.swift */,
+				318BF1B22502B82200311A6E /* RPSMatch.swift */,
+				318BF1B42502BA9200311A6E /* RPS.swift */,
+				313A833C24FD54660025F23E /* ResultViewController.swift */,
 				313A831E24FD53240025F23E /* Main.storyboard */,
 				313A832124FD53260025F23E /* Assets.xcassets */,
 				313A832324FD53260025F23E /* LaunchScreen.storyboard */,
 				313A832624FD53260025F23E /* Info.plist */,
+				3148F4B024FD632E000AF5CF /* GameState.swift */,
+				318BF1B82502BFA900311A6E /* HistoryViewController.swift */,
 			);
 			path = "Paper Scissors Rock";
 			sourceTree = "<group>";
@@ -200,9 +215,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				313A831D24FD53240025F23E /* ViewController.swift in Sources */,
+				313A833D24FD54660025F23E /* ResultViewController.swift in Sources */,
+				313A831D24FD53240025F23E /* PlayViewController.swift in Sources */,
+				3148F4B124FD632E000AF5CF /* GameState.swift in Sources */,
+				318BF1B32502B82200311A6E /* RPSMatch.swift in Sources */,
+				318BF1B52502BA9200311A6E /* RPS.swift in Sources */,
 				313A831924FD53240025F23E /* AppDelegate.swift in Sources */,
 				313A831B24FD53240025F23E /* SceneDelegate.swift in Sources */,
+				318BF1B92502BFA900311A6E /* HistoryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

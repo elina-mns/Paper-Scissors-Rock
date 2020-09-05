@@ -1,24 +1,172 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Play View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="PlayViewController" customModule="Paper_Scissors_Rock" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2bs-Tb-emo">
+                                <rect key="frame" x="170" y="241" width="92" height="94"/>
+                                <state key="normal" image="paper"/>
+                                <connections>
+                                    <action selector="didTapOnPaper:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ra2-Ou-8YN"/>
+                                    <segue destination="VCb-cc-ka0" kind="modal" identifier="didTapOnPaper" id="jWG-WM-gJl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EX7-fb-sYR">
+                                <rect key="frame" x="170" y="416" width="92" height="76"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="76" id="vD7-4u-vQD"/>
+                                </constraints>
+                                <state key="normal" image="rock"/>
+                                <connections>
+                                    <action selector="didTapOnRockWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eLs-s2-6Vr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aAx-AI-LLg">
+                                <rect key="frame" x="170" y="590" width="92" height="76"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="76" id="rDd-S8-0cw"/>
+                                </constraints>
+                                <state key="normal" image="scissors"/>
+                                <connections>
+                                    <segue destination="VCb-cc-ka0" kind="presentation" identifier="didTapOnScissors" id="yLW-Ch-DQ6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A1i-EC-XfG">
+                                <rect key="frame" x="284" y="781" width="71" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="History">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="showHistory:" destination="BYZ-38-t0r" eventType="touchUpInside" id="efd-jI-tGb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="aAx-AI-LLg" firstAttribute="top" secondItem="EX7-fb-sYR" secondAttribute="bottom" constant="98" id="0QO-LL-4EC"/>
+                            <constraint firstItem="2bs-Tb-emo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="197" id="0zA-qW-81r"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="aAx-AI-LLg" secondAttribute="bottom" constant="196" id="4ip-m6-obg"/>
+                            <constraint firstItem="EX7-fb-sYR" firstAttribute="top" secondItem="2bs-Tb-emo" secondAttribute="bottom" constant="81" id="8K3-2b-jFM"/>
+                            <constraint firstItem="2bs-Tb-emo" firstAttribute="leading" secondItem="EX7-fb-sYR" secondAttribute="leading" id="O1P-iN-DSi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2bs-Tb-emo" secondAttribute="trailing" constant="152" id="SMM-qx-2SM"/>
+                            <constraint firstItem="EX7-fb-sYR" firstAttribute="trailing" secondItem="aAx-AI-LLg" secondAttribute="trailing" id="UPS-CH-dhw"/>
+                            <constraint firstItem="2bs-Tb-emo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="170" id="cDs-6l-kZC"/>
+                            <constraint firstItem="A1i-EC-XfG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="737" id="dLR-Td-PzW"/>
+                            <constraint firstItem="EX7-fb-sYR" firstAttribute="leading" secondItem="aAx-AI-LLg" secondAttribute="leading" id="p3H-uf-xyA"/>
+                            <constraint firstItem="A1i-EC-XfG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="284" id="qjs-BH-iJX"/>
+                            <constraint firstItem="2bs-Tb-emo" firstAttribute="trailing" secondItem="EX7-fb-sYR" secondAttribute="trailing" id="qzO-bz-ljJ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="historyButton" destination="A1i-EC-XfG" id="86M-bW-VGd"/>
+                        <outlet property="paper" destination="2bs-Tb-emo" id="csm-en-745"/>
+                        <outlet property="rock" destination="EX7-fb-sYR" id="cbg-AX-pII"/>
+                        <outlet property="scissors" destination="aAx-AI-LLg" id="xo0-dg-7Fx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="114.50892857142857"/>
+        </scene>
+        <!--Result View Controller-->
+        <scene sceneID="kxk-dl-9Qv">
+            <objects>
+                <viewController storyboardIdentifier="ResultViewController" id="VCb-cc-ka0" customClass="ResultViewController" customModule="Paper_Scissors_Rock" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IUI-cU-6QD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U24-vg-dhJ">
+                                <rect key="frame" x="146" y="630" width="123" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="Play again">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="goBack" destination="VCb-cc-ka0" eventType="touchUpInside" id="fZo-5T-rmP"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xex-h5-MdX">
+                                <rect key="frame" x="186" y="394" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PaperCoversRock" translatesAutoresizingMaskIntoConstraints="NO" id="1ln-1d-1nX">
+                                <rect key="frame" x="167" y="314" width="80" height="60"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Xex-h5-MdX" firstAttribute="top" secondItem="1ln-1d-1nX" secondAttribute="bottom" constant="20" id="T2R-4J-q63"/>
+                            <constraint firstItem="Xex-h5-MdX" firstAttribute="centerX" secondItem="uxs-U9-ccu" secondAttribute="centerX" id="a8H-sI-Ml4"/>
+                            <constraint firstItem="Xex-h5-MdX" firstAttribute="centerY" secondItem="uxs-U9-ccu" secondAttribute="centerY" id="cOV-mH-WD9"/>
+                            <constraint firstItem="1ln-1d-1nX" firstAttribute="centerX" secondItem="uxs-U9-ccu" secondAttribute="centerX" id="tPn-ge-ydk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uxs-U9-ccu"/>
+                    </view>
+                    <connections>
+                        <outlet property="picture" destination="1ln-1d-1nX" id="XuX-C0-fHM"/>
+                        <outlet property="playAgain" destination="U24-vg-dhJ" id="FH0-PT-Usi"/>
+                        <outlet property="text" destination="Xex-h5-MdX" id="3kH-4Y-ilV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zRG-eN-4P7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="886" y="115"/>
+        </scene>
+        <!--HistoryViewController-->
+        <scene sceneID="stR-hU-EFP">
+            <objects>
+                <tableViewController storyboardIdentifier="HistoryViewController" title="HistoryViewController" id="tqK-IB-rny" customClass="HistoryViewController" customModule="Paper_Scissors_Rock" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="BiD-hE-TZr" customClass="HistoryViewController">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="sectionIndexBackgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DefaultCell" id="CEC-Kk-1zi">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CEC-Kk-1zi" id="1Er-hr-5iS">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="tqK-IB-rny" id="LtM-bI-zpl"/>
+                            <outlet property="delegate" destination="tqK-IB-rny" id="qqv-c4-084"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rue-fa-qMO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1674" y="115"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="jWG-WM-gJl"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="PaperCoversRock" width="80" height="60"/>
+        <image name="paper" width="75" height="65"/>
+        <image name="rock" width="75" height="65"/>
+        <image name="scissors" width="75" height="65"/>
+    </resources>
 </document>

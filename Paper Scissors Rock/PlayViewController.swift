@@ -27,6 +27,9 @@ class PlayViewController: UIViewController {
     
     @IBAction func showHistory(_ sender: AnyObject) {
         //TODO: Present HistoryViewController
+        let vc = HistoryViewController()
+        vc.history = history
+        self.present(vc, animated: true, completion: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -36,32 +39,28 @@ class PlayViewController: UIViewController {
             controller.image = resultImage
         } else if segue.identifier == "didTapOnScissors" {
             let controller = segue.destination as! ResultViewController
-            let userChoice = GameState.scissors
-            let appResult = randomResult()
-            let result = compareResult(userResult: userChoice, appResult: appResult)
-            resultString = result.text
-            resultImage = result.image
+            generateAndSaveResult(userChoice: .scissors)
             controller.resultString = self.resultString
             controller.image = resultImage
         }
     }
     
-    @IBAction func didTapOnPaper(_ sender: Any) {
-        let userChoice = GameState.paper
+    func generateAndSaveResult(userChoice: GameState) {
         let appResult = randomResult()
         let result = compareResult(userResult: userChoice, appResult: appResult)
         resultString = result.text
         resultImage = result.image
+        history.append(resultString)
+    }
+    
+    @IBAction func didTapOnPaper(_ sender: Any) {
+        generateAndSaveResult(userChoice: .paper)
         performSegue(withIdentifier: "didTapOnPaper", sender: self)
     }
     
     @IBAction func didTapOnRock(sender: UIButton) {
         let controller = self.storyboard?.instantiateViewController(identifier: "ResultViewController") as! ResultViewController
-        let userChoice = GameState.rock
-        let appResult = randomResult()
-        let result = compareResult(userResult: userChoice, appResult: appResult)
-        resultString = result.text
-        resultImage = result.image
+        generateAndSaveResult(userChoice: .rock)
         controller.resultString = self.resultString
         controller.image = self.resultImage
         present(controller, animated: true, completion: nil)
