@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -43,7 +45,7 @@
                                     <segue destination="VCb-cc-ka0" kind="presentation" identifier="didTapOnScissors" id="yLW-Ch-DQ6"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A1i-EC-XfG">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A1i-EC-XfG">
                                 <rect key="frame" x="284" y="781" width="71" height="40"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <state key="normal" title="History">
@@ -54,7 +56,8 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemGray2Color"/>
                         <constraints>
                             <constraint firstItem="aAx-AI-LLg" firstAttribute="top" secondItem="EX7-fb-sYR" secondAttribute="bottom" constant="98" id="0QO-LL-4EC"/>
                             <constraint firstItem="2bs-Tb-emo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="197" id="0zA-qW-81r"/>
@@ -69,7 +72,6 @@
                             <constraint firstItem="A1i-EC-XfG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="284" id="qjs-BH-iJX"/>
                             <constraint firstItem="2bs-Tb-emo" firstAttribute="trailing" secondItem="EX7-fb-sYR" secondAttribute="trailing" id="qzO-bz-ljJ"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="historyButton" destination="A1i-EC-XfG" id="86M-bW-VGd"/>
@@ -90,9 +92,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U24-vg-dhJ">
-                                <rect key="frame" x="146" y="630" width="123" height="46"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U24-vg-dhJ">
+                                <rect key="frame" x="145" y="630" width="124" height="46"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <state key="normal" title="Play again">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -102,23 +103,25 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xex-h5-MdX">
-                                <rect key="frame" x="186" y="394" width="42" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="183" y="396" width="48" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PaperCoversRock" translatesAutoresizingMaskIntoConstraints="NO" id="1ln-1d-1nX">
-                                <rect key="frame" x="167" y="314" width="80" height="60"/>
+                                <rect key="frame" x="167" y="225" width="80" height="60"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="Xex-h5-MdX" firstAttribute="top" secondItem="1ln-1d-1nX" secondAttribute="bottom" constant="20" id="T2R-4J-q63"/>
-                            <constraint firstItem="Xex-h5-MdX" firstAttribute="centerX" secondItem="uxs-U9-ccu" secondAttribute="centerX" id="a8H-sI-Ml4"/>
-                            <constraint firstItem="Xex-h5-MdX" firstAttribute="centerY" secondItem="uxs-U9-ccu" secondAttribute="centerY" id="cOV-mH-WD9"/>
-                            <constraint firstItem="1ln-1d-1nX" firstAttribute="centerX" secondItem="uxs-U9-ccu" secondAttribute="centerX" id="tPn-ge-ydk"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="uxs-U9-ccu"/>
+                        <color key="backgroundColor" systemColor="systemGray2Color"/>
+                        <constraints>
+                            <constraint firstItem="U24-vg-dhJ" firstAttribute="top" secondItem="Xex-h5-MdX" secondAttribute="bottom" constant="210" id="Kse-CC-YE8"/>
+                            <constraint firstItem="uxs-U9-ccu" firstAttribute="bottom" secondItem="U24-vg-dhJ" secondAttribute="bottom" constant="132" id="Wyf-w8-xkT"/>
+                            <constraint firstItem="Xex-h5-MdX" firstAttribute="centerX" secondItem="uxs-U9-ccu" secondAttribute="centerX" id="gUA-ha-gya"/>
+                            <constraint firstItem="Xex-h5-MdX" firstAttribute="top" secondItem="1ln-1d-1nX" secondAttribute="bottom" constant="111" id="qQq-sM-PYc"/>
+                            <constraint firstItem="1ln-1d-1nX" firstAttribute="centerX" secondItem="uxs-U9-ccu" secondAttribute="centerX" id="qTf-u8-Hyw"/>
+                            <constraint firstItem="U24-vg-dhJ" firstAttribute="centerX" secondItem="uxs-U9-ccu" secondAttribute="centerX" id="w1m-c8-bq9"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="picture" destination="1ln-1d-1nX" id="XuX-C0-fHM"/>
@@ -128,7 +131,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zRG-eN-4P7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="886" y="115"/>
+            <point key="canvasLocation" x="885.50724637681162" y="114.50892857142857"/>
         </scene>
         <!--HistoryViewController-->
         <scene sceneID="stR-hU-EFP">
@@ -137,7 +140,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="BiD-hE-TZr" customClass="HistoryViewController">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <color key="sectionIndexBackgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DefaultCell" id="CEC-Kk-1zi">
@@ -168,5 +171,11 @@
         <image name="paper" width="75" height="65"/>
         <image name="rock" width="75" height="65"/>
         <image name="scissors" width="75" height="65"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>
