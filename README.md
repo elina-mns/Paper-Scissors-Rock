@@ -1,6 +1,6 @@
 # Paper-Scissors-Rock
 
-An app where user chooses paper, scissors or rock.
+A practice game app where user chooses paper, scissors or rock.
 
 ## _Description_
 
